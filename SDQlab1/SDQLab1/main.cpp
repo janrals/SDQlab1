@@ -34,15 +34,37 @@ public:
     }
 };
 
+class Rectangle: public Shape
+{
+public:
+    int getArea()
+    {
+        return (width * height);
+    }
+};
+
 int main(void)
 {
+    int recWidth = 0, recHeight = 0;
+
     Triangle Tri;
     Tri.setWidth(5);
     Tri.setHeight(7);
 
+    Rectangle Rec;
+
+    cout << "Please enter the width and height of the rectangle: ";
+
+    cin >> recWidth >> recHeight;
+
+    Rec.setWidth(recWidth);
+    Rec.setHeight(recHeight);
+
     // Print the area of the object.
 
-    cout << "Total Triangle Area " << Tri.getArea() << endl;
+    cout << "\n\nTotal Triangle Area " << Tri.getArea() << endl;
+
+    cout << "\nTotal Rectangle Area " << Rec.getArea() << endl;
 
     return 0;
 }
