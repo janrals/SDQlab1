@@ -1,5 +1,6 @@
 #include <iostream>
-
+//Name : Sean Clancy
+//Student ID : B00069909
 using namespace std;
 
 // Base class
