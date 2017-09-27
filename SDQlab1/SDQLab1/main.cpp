@@ -11,15 +11,15 @@ public:
     virtual int getArea() = 0;
 
     void setWidth(int w)
-{
-    width = w;
-}
+    {
+        width = w;
+    }
 
-void setHeight(int h)
-{
+    void setHeight(int h)
+    {
         height = h;
-}
-    protected:
+    }
+protected:
     int width;
     int height;
 
@@ -34,7 +34,6 @@ public:
     }
 };
 
-<<<<<<< HEAD
 class Circle: public Shape
 {
 public:
@@ -42,26 +41,29 @@ public:
     int getArea()
     {
         return (3.14 * width * width);
-=======
+    }
+};
+
 class Rectangle: public Shape
 {
 public:
     int getArea()
     {
         return (width * height);
->>>>>>> 3f3ee28749e5d4df9cf19adbd21594999f3f9721
     }
 };
 
 int main(void)
 {
-    int recWidth = 0, recHeight = 0;
+    int recWidth = 0, recHeight = 0, cirWidth;
 
     Triangle Tri;
     Tri.setWidth(5);
     Tri.setHeight(7);
 
     Rectangle Rec;
+
+    Circle Cir;
 
     cout << "Please enter the width and height of the rectangle: ";
 
@@ -72,20 +74,16 @@ int main(void)
 
     // Print the area of the object.
 
-<<<<<<< HEAD
-    cout << "input radius of a circle" << endl;
 
-    cin >> input;
-    Cir.setWidth(input);
+    cout << "\n\nInput radius of a circle: ";
 
-    cout << "Total Circle area: " << Cir.getArea() << endl;
+    cin >> cirWidth;
+    Cir.setWidth(cirWidth);
 
-    cout << "Total Triangle Area " << Tri.getArea() << endl;
-=======
+    cout << "\n\nTotal Circle area: " << Cir.getArea() << endl;
     cout << "\n\nTotal Triangle Area " << Tri.getArea() << endl;
-
     cout << "\nTotal Rectangle Area " << Rec.getArea() << endl;
->>>>>>> 3f3ee28749e5d4df9cf19adbd21594999f3f9721
+
 
     return 0;
 }
