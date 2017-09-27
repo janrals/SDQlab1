@@ -55,7 +55,7 @@ public:
 
 int main(void)
 {
-    int recWidth = 0, recHeight = 0, cirWidth;
+    int recWidth = 0, recHeight = 0, cirRadius;
 
     Triangle Tri;
     Tri.setWidth(5);
@@ -77,13 +77,14 @@ int main(void)
 
     cout << "\n\nInput radius of a circle: ";
 
-    cin >> cirWidth;
-    Cir.setWidth(cirWidth);
+    cin >> cirRadius;
+    Cir.setWidth(cirRadius);
 
     cout << "\n\nTotal Circle area: " << Cir.getArea() << endl;
     cout << "\n\nTotal Triangle Area " << Tri.getArea() << endl;
     cout << "\nTotal Rectangle Area " << Rec.getArea() << endl;
 
+    cout << "\nTotal area is: " << (Cir.getArea() + Tri.getArea() + Rec.getArea()) << endl;
 
     return 0;
 }
