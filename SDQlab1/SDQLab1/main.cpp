@@ -34,6 +34,16 @@ public:
     }
 };
 
+class Circle: public Shape
+{
+public:
+
+    int getArea()
+    {
+        return (3.14 * width * width);
+    }
+};
+
 int main(void)
 {
     Triangle Tri;
@@ -41,6 +51,13 @@ int main(void)
     Tri.setHeight(7);
 
     // Print the area of the object.
+
+    cout << "input radius of a circle" << endl;
+
+    cin >> input;
+    Cir.setWidth(input);
+
+    cout << "Total Circle area: " << Cir.getArea() << endl;
 
     cout << "Total Triangle Area " << Tri.getArea() << endl;
 
